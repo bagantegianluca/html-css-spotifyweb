@@ -18,6 +18,16 @@
     --site-ul-gray: #c1c1c1;
     --site-white: white;
 }
+
+h4{
+    font-size: 13px;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
 /* #endregion common */
 
 /* #region utility */
@@ -44,12 +54,98 @@
     position: fixed;
     top: 0;
     left: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-}
+    & .logo{
+        width: 130px;
+        margin-bottom: 30px;
+    }
+    & .logo-small{
+        display: none;
+    }
+    
+    & .menu-home{
+        margin-bottom: 30px;
+        & li{
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            & img{
+                width: 22px;
+                margin-right: 10px;
+            }
+            & h4{
+                color: var(--site-gray);
+            }
+            & h4.active{
+                color: var(--site-white);
+            }
+        }
+    }
 
-.app-install{
-    margin-top: auto;
+    & .playlist{
+        & h4.title{
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        & .add-playlist{
+            display: flex;
+            align-items: center;
+            & .add-playlist-img{
+                width: 36px;
+                height: 36px;
+                background: var(--site-l-gray);
+                margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--site-black);
+                font-size: 38px;
+                font-weight: 600;
+            }
+        }
+        & li{
+            margin-bottom: 25px;
+        }
+        & li h4{
+            color: var(--site-gray);
+        }
+    }
+
+    & .app-install{
+        margin-top: auto;
+        & .download{
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+            & h4{
+                color: var(--site-gray);
+            }
+            & .download-img{
+                width: 18px;
+                margin-right: 10px;
+            }
+        }
+        & hr{
+            border-color: var(--site-gray);
+            margin-bottom: 14px;
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+        & .profile-img{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--site-l-gray);
+            margin-right: 10px;
+            & img{
+                object-fit: cover;    
+            }
+        }
+        }
+    }
 }
 /* #endregion sidebar */
 
