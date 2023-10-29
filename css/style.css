@@ -37,6 +37,7 @@ a{
 /* #region utility */
 .row{
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -.5rem;
 }
 
@@ -194,7 +195,7 @@ body{
     position: absolute;
     padding: 0 1rem;
     padding-top: 7rem;
-
+    color: var(--site-white);
     & nav{
         font-size: 13px;
         font-weight: bold;
@@ -221,6 +222,53 @@ body{
             }
         }
     }
+    /* nav */
+
+    & section{
+        & a{
+            color: var(--site-white);
+        }
+        & h2{
+            margin-top: 28px;
+            margin-bottom: 30px;
+        }
+        & h3{
+            margin-bottom: 10px;
+        }
+        & h4{
+            color: var(--site-gray);
+        }
+        & .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 12px;
+            & .card-img{
+                position: relative;
+                aspect-ratio: 1;
+                margin-bottom: 20px;
+                & .play{
+                    display: none;
+                }
+            }
+        }
+        & .card:hover{
+            & .play{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                aspect-ratio: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 50%);
+                & i{
+                    font-size: 100px;
+                }
+            }
+        }
+    }
 }
 /* #endregion main */
 
@@ -239,7 +287,27 @@ body{
 }
 /* #endregion footer */
 
-/* #region media queries */
+/* #region media query md */
+@media screen and (max-width: 878px){
+    #main{
+        .col-3-md{
+            width: 25%;
+        }
+    }
+}
+/* #endregion media query md */
+
+/* #region media query s */
+@media screen and (max-width: 639px){
+    #main{
+        .col-6-s{
+            width: 50%;
+        }
+    }
+}
+/* #endregion media query s */
+
+/* #region media query xs */
 @media screen and (max-width: 552px){
     #sidebar{
         width: 50px;
@@ -278,7 +346,7 @@ body{
         width: calc(100% - 50px);
     }
 }
-/* #endregion media queries */
+/* #endregion media query xs */
 
 /* #region debug */
 .debug .menu-home{
