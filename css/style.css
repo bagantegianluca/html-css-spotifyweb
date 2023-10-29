@@ -49,6 +49,10 @@ a{
     padding-left: .5rem;
     padding-right: .5rem;
 }
+
+.d-none{
+    display: none;
+}
 /* #endregion utility */
 
 /* #region sidebar */
@@ -193,8 +197,7 @@ body{
     background: var(--site-primary);
     min-height: calc(100% - 90px);
     position: absolute;
-    padding: 0 1rem;
-    padding-top: 7rem;
+    padding: 7rem 1rem;
     color: var(--site-white);
     & nav{
         font-size: 13px;
@@ -230,18 +233,16 @@ body{
         }
         & h2{
             margin-top: 28px;
-            margin-bottom: 30px;
-        }
-        & h3{
-            margin-bottom: 10px;
         }
         & h4{
+            margin-top: 12px;
             color: var(--site-gray);
         }
         & .card{
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 30px;
             margin-bottom: 12px;
             & .card-img{
                 position: relative;
