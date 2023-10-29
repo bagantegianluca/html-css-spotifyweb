@@ -4,6 +4,143 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    color: var(--site-white);
+    list-style: none;
 }
 
+:root{
+    --site-black: black;
+    --site-dark: #080b12;
+    --site-primary: #141922;
+    --site-d-gray: #282828;
+    --site-gray: #5a5a5a;
+    --site-l-gray: #a3a3a3;
+    --site-ul-gray: #c1c1c1;
+    --site-white: white;
+}
 /* #endregion common */
+
+/* #region utility */
+.row{
+    display: flex;
+    margin: 0 -.5rem;
+}
+
+.col-2{
+    width: calc((100% / 12) * 2);
+}
+
+[class^="col"]{
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+/* #endregion utility */
+
+/* #region sidebar */
+#sidebar{
+    background: var(--site-black);
+    width: 230px;
+    height: calc(100vh - 90px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-install{
+    margin-top: auto;
+}
+/* #endregion sidebar */
+
+/* #region header */
+#header{
+    background: rgba(0, 0, 0, 50%);
+    width: calc(100% - 230px);
+    height: 90px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+/* #endregion header */
+
+/* #region main */
+body{
+    position: relative;
+    height: 100vh;
+    margin-right: 1rem;
+}
+
+#main{
+    background: var(--site-primary);
+    width: calc(100% - 230px);
+    min-height: calc(100% - 90px);
+    position: absolute;
+    top: 0;
+    left: 230px;
+    padding: 0 1rem;
+    padding-top: 7rem;
+}
+/* #endregion main */
+
+/* #region footer */
+#footer{
+    background: var(--site-d-gray);
+    width: 100%;
+    height: 90px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+}
+/* #endregion footer */
+
+/* #region debug */
+.debug .menu-home{
+    background: rgba(128, 128, 128, 0.5);
+    height: 95px;
+    margin-bottom: 2rem;
+}
+
+.debug .playlist{
+    background: rgba(128, 128, 128, 0.5);
+    height: 310px;
+}
+
+.debug .app-install{
+    background: rgba(128, 128, 128, 0.5);
+    width: 100%;
+    height: 70px;
+}
+
+.debug nav{
+    background: #04ff0079;
+    height: 65px;
+}
+
+.debug section{
+    background: #b1b2b583;
+    height: 370px;
+}
+
+.debug .card{
+    background: #ea00ff81;
+    height: 270px;
+}
+
+.debug .playing, .debug .video-sound{
+    background: #b1b2b583;
+    width: 220px;
+    height: 100%;
+}
+
+.debug .player{
+    background: #b1b2b583;
+    width: 520px;
+    height: 100%;
+}
+/* #endregion debug */
