@@ -150,13 +150,16 @@ img{
 /* #endregion sidebar */
 
 /* #region header */
-#header{
-    background: rgba(0, 0, 0, 50%);
+#header, #main{
     width: calc(100% - 230px);
-    height: 90px;
-    position: fixed;
     top: 0;
     right: 0;
+}
+
+#header{
+    background: rgba(0, 0, 0, 50%);
+    height: 90px;
+    position: fixed;
     z-index: 1;
 }
 /* #endregion header */
@@ -170,11 +173,8 @@ body{
 
 #main{
     background: var(--site-primary);
-    width: calc(100% - 230px);
     min-height: calc(100% - 90px);
     position: absolute;
-    top: 0;
-    left: 230px;
     padding: 0 1rem;
     padding-top: 7rem;
 }
@@ -194,6 +194,47 @@ body{
     align-items: center;;
 }
 /* #endregion footer */
+
+/* #region media queries */
+@media screen and (max-width: 552px){
+    #sidebar{
+        width: 50px;
+        padding: 10px;
+        align-items: center;
+        & .logo{
+            display: none;
+        }
+        & .logo-small{
+            display: block;
+            width: 30px;
+            margin-bottom: 16px;
+        }
+        & .menu-home li img{
+            margin-right: 0;
+        }
+        & .menu-home li h4{
+            display: none;
+        }
+        & .playlist, hr{
+            display: none;
+        }
+        & .app-install{
+            & .download{
+                margin-bottom: 20px;
+            }
+            & .download h4, .profile h3{
+                display: none;
+            }
+            & .download .download-img, .profile .profile-img{
+                margin: 0 auto;
+            }
+        }
+    }
+    #header, #main{
+        width: calc(100% - 50px);
+    }
+}
+/* #endregion media queries */
 
 /* #region debug */
 .debug .menu-home{
