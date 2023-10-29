@@ -28,6 +28,10 @@ img{
     max-height: 100%;
     display: block;
 }
+
+a{
+    text-decoration: none;
+}
 /* #endregion common */
 
 /* #region utility */
@@ -67,7 +71,7 @@ img{
     
     & .menu-home{
         margin-bottom: 30px;
-        & li{
+        & li>a{
             display: flex;
             align-items: center;
             margin-bottom: 12px;
@@ -89,7 +93,7 @@ img{
             text-transform: uppercase;
             margin-bottom: 15px;
         }
-        & .add-playlist{
+        & .add-playlist a{
             display: flex;
             align-items: center;
             & .add-playlist-img{
@@ -115,7 +119,7 @@ img{
 
     & .app-install{
         margin-top: auto;
-        & .download{
+        & .download a{
             display: flex;
             align-items: center;
             margin-bottom: 14px;
@@ -209,10 +213,10 @@ body{
             width: 30px;
             margin-bottom: 16px;
         }
-        & .menu-home li img{
+        & .menu-home li a img{
             margin-right: 0;
         }
-        & .menu-home li h4{
+        & .menu-home li a h4{
             display: none;
         }
         & .playlist, hr{
