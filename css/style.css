@@ -88,12 +88,18 @@ a {
     }
 
     & .menu-home {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+
+        & li {
+            & .left-highlight {
+                display: none;
+            }
+        }
 
         & a {
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
+            padding: 6px 0;
 
             & img {
                 width: 22px;
@@ -107,7 +113,6 @@ a {
         & h4.title {
             color: var(--site-white);
             text-transform: uppercase;
-            margin-bottom: 15px;
         }
 
         & .add-playlist a {
@@ -129,7 +134,7 @@ a {
         }
 
         & li {
-            margin-bottom: 25px;
+            padding: 10px 0;
             color: var(--site-gray);
         }
     }
@@ -187,6 +192,7 @@ a {
     }
 
     & li.active {
+        position: relative;
         & a {
             color: var(--site-white);
 
@@ -197,6 +203,16 @@ a {
             & .add-playlist-img {
                 background: var(--site-white);
             }
+        }
+
+        & .left-highlight {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 3px;
+            height: 100%;
+            background: var(--site-active-link);
         }
     }
 }
@@ -229,6 +245,7 @@ a {
         font-weight: bold;
         color: var(--site-white);
         margin-right: 20px;
+        transition: scale .5s;
     }
 
     & .btn:hover {
@@ -269,11 +286,13 @@ body {
 
             & li a {
                 color: var(--site-l-gray);
-                & hr{
+
+                & hr {
                     border-color: transparent;
                     width: 100%;
                     transition: width .5s;
                 }
+
                 & hr.active {
                     display: block;
                     border-color: var(--site-active-link);
@@ -284,7 +303,8 @@ body {
 
             & li a:hover {
                 color: var(--site-white);
-                & hr{
+
+                & hr {
                     display: block;
                     border-color: var(--site-active-link);
                     width: 30px;
@@ -335,7 +355,7 @@ body {
                     left: 0;
                     background: rgba(0, 0, 0, 50%);
                     transition: all 1s;
-    
+
                     & i {
                         scale: 0;
                         font-size: 100px;
@@ -348,6 +368,7 @@ body {
         & .card:hover {
             & .play {
                 opacity: 1;
+
                 & i {
                     scale: 1;
                 }
@@ -425,10 +446,11 @@ body {
                 font-size: 30px;
                 margin: 0 10px;
                 color: var(--site-white);
+                transition: scale .5s;
             }
 
             & .fa-circle-play:hover {
-                scale: 1.1;
+                scale: 1.2;
             }
         }
 
@@ -468,6 +490,7 @@ body {
                         aspect-ratio: 1;
                         border-radius: 50%;
                         background: var(--site-white);
+                        box-shadow: 0px 2px 10px var(--site-black);
                         position: absolute;
                         top: 50%;
                         right: 0;
@@ -515,6 +538,7 @@ body {
                     aspect-ratio: 1;
                     border-radius: 50%;
                     background: var(--site-white);
+                    box-shadow: 0px 2px 10px var(--site-black);
                     position: absolute;
                     top: 50%;
                     right: 0;
