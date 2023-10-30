@@ -173,7 +173,8 @@ a {
         }
     }
 
-    & a:hover, .app-install.download a:hover{
+    & a:hover,
+    .app-install.download a:hover {
         color: var(--site-white);
 
         & img {
@@ -268,21 +269,27 @@ body {
 
             & li a {
                 color: var(--site-l-gray);
+                & hr{
+                    border-color: transparent;
+                    width: 100%;
+                    transition: width .5s;
+                }
+                & hr.active {
+                    display: block;
+                    border-color: var(--site-active-link);
+                    width: 30px;
+                    margin: 5px auto;
+                }
             }
 
             & li a:hover {
                 color: var(--site-white);
-            }
-
-            & li a hr {
-                display: none;
-            }
-
-            & li a hr.active {
-                display: block;
-                border-color: var(--site-active-link);
-                width: 30px;
-                margin: 5px auto;
+                & hr{
+                    display: block;
+                    border-color: var(--site-active-link);
+                    width: 30px;
+                    margin: 5px auto;
+                }
             }
         }
     }
@@ -317,25 +324,32 @@ body {
                 margin-bottom: 20px;
 
                 & .play {
-                    display: none;
+                    opacity: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    aspect-ratio: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0, 0, 0, 50%);
+                    transition: all 1s;
+    
+                    & i {
+                        scale: 0;
+                        font-size: 100px;
+                        transition: all 1s;
+                    }
                 }
             }
         }
 
         & .card:hover {
             & .play {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                aspect-ratio: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background: rgba(0, 0, 0, 50%);
-
+                opacity: 1;
                 & i {
-                    font-size: 100px;
+                    scale: 1;
                 }
             }
         }
