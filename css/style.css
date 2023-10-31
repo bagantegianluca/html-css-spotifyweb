@@ -656,6 +656,17 @@ body {
 
 /* #endregion media query xs */
 
+/* #region media query h-xs */
+@media screen and (max-height: 500px) {
+    #header{
+        display: none;
+    }
+    #main{
+        padding-top: 1rem;
+    }
+}
+/* #endregion media query h-xs */
+
 /* #region debug */
 .debug .menu-home {
     background: rgba(128, 128, 128, 0.5);
