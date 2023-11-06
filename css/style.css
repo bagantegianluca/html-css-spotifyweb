@@ -260,7 +260,6 @@ a {
 body {
     position: relative;
     height: 100vh;
-    margin-right: 1rem;
 }
 
 #main {
@@ -658,13 +657,15 @@ body {
 
 /* #region media query h-xs */
 @media screen and (max-height: 500px) {
-    #header{
+    #header {
         display: none;
     }
-    #main{
+
+    #main {
         padding-top: 1rem;
     }
 }
+
 /* #endregion media query h-xs */
 
 /* #region debug */
